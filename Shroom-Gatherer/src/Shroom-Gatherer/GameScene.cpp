@@ -29,7 +29,7 @@ void GameScene::OnInitialize()
 	{
 		//increaseAttackButton
 		SkillButton* increaseAttackButton = CreateRectangle<SkillButton>(350, 50, sf::Color::Red, nullptr);
-		increaseAttackButton->SetText("Increase click damage");
+		increaseAttackButton->SetText("Augmenter les dégâts");
 		increaseAttackButton->SetPrice(10);
 		increaseAttackButton->SetBehaviour(SkillButton::Behaviour::IncreaseAttack);
 		increaseAttackButton->SetPosition(300, GetWindowHeight() / 4);
@@ -37,7 +37,7 @@ void GameScene::OnInitialize()
 		increaseAttackButton->SetActive(false);
 
 		SkillButton* increaseShroomsLimit = CreateRectangle<SkillButton>(500, 50, sf::Color::Red, nullptr);
-		increaseShroomsLimit->SetText("Increase shrooms on screen limit");
+		increaseShroomsLimit->SetText("Augmenter limite champignons sur écran");
 		increaseShroomsLimit->SetPrice(10);
 		increaseShroomsLimit->SetBehaviour(SkillButton::Behaviour::IncreaseShroomsLimit);
 		increaseShroomsLimit->SetRebuy(true);
@@ -45,7 +45,7 @@ void GameScene::OnInitialize()
 		increaseShroomsLimit->SetActive(false);
 
 		SkillButton* increaseSpawnRate = CreateRectangle<SkillButton>(500, 50, sf::Color::Red, nullptr);
-		increaseSpawnRate->SetText("Increase shrooms spawn rate");
+		increaseSpawnRate->SetText("Accélérer l'apparition de champignons");
 		increaseSpawnRate->SetPrice(5);
 		increaseSpawnRate->SetBehaviour(SkillButton::Behaviour::IncreaseShroomsSpawnRate);
 		increaseSpawnRate->SetRebuy(true);
@@ -53,7 +53,7 @@ void GameScene::OnInitialize()
 		increaseSpawnRate->SetActive(false);
 
 		SkillButton* unlockAutoClick = CreateRectangle<SkillButton>(330, 50, sf::Color::Blue, nullptr);
-		unlockAutoClick->SetText("Unlock autoClick");
+		unlockAutoClick->SetText("Débloquer le clique auto");
 		unlockAutoClick->SetPrice(75);
 		unlockAutoClick->SetBehaviour(SkillButton::Behaviour::AutoClick);
 		unlockAutoClick->SetRebuy(false);
@@ -61,7 +61,7 @@ void GameScene::OnInitialize()
 		unlockAutoClick->SetActive(false);
 
 		SkillButton* unlockFliesSwarm = CreateRectangle<SkillButton>(350, 50, sf::Color::Blue, nullptr);
-		unlockFliesSwarm->SetText("Unlock flies swarm");
+		unlockFliesSwarm->SetText("Débloquer la nuée de mouches");
 		unlockFliesSwarm->SetPrice(200);
 		unlockFliesSwarm->SetBehaviour(SkillButton::Behaviour::FliesSwarm);
 		unlockFliesSwarm->SetRebuy(false);

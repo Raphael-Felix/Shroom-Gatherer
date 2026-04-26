@@ -30,7 +30,7 @@ void SkillButton::OnClicked()
 	if (m_price <= GetScene<GameScene>()->GetGatheredMushrooms() && m_isUnlocked == false)
 	{
 		m_behaviour();
-		GetScene<GameScene>()->ShowMessage("Upgrade buyed !", 2.5f);
+		GetScene<GameScene>()->ShowMessage("Amélioration achetée !", 2.5f);
 
 		GetScene<GameScene>()->UseMushrooms(m_price);
 
@@ -44,9 +44,13 @@ void SkillButton::OnClicked()
 			Unlock();
 		}
 	}
+	else if (m_isUnlocked)
+	{
+		GetScene<GameScene>()->ShowMessage("Amélioration déjà possédée.", 2.5f);
+	}
 	else
 	{
-		GetScene<GameScene>()->ShowMessage("Not enough mushrooms", 2.5f);
+		GetScene<GameScene>()->ShowMessage("Pas assez de champignons", 2.5f);
 	}
 }
 

@@ -16,7 +16,7 @@ void Mushroom::OnUpdate()
 {
 	if (mActive)
 	{
-		Debug::DrawText(GetPosition(0.f).x, GetPosition(0.5f, 0.f).y - 20, "HP : " + std::to_string(m_health), sf::Color::Red, 15);
+		Debug::DrawText(GetPosition(0.f).x, GetPosition(0.5f, 0.f).y - 20, "PV : " + std::to_string(m_health), sf::Color::Red, 15);
 	}
 }
 
