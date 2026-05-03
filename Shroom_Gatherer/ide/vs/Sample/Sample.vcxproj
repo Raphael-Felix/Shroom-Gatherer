@@ -13,8 +13,8 @@
     <PropertyGroup Label="Globals">
         <VCProjectVersion>17.0</VCProjectVersion>
         <Keyword>Win32Proj</Keyword>
-        <ProjectGuid>{C9535A5D-5D09-45A5-B014-2C0F806592BB}</ProjectGuid>
-        <RootNamespace>LightEngine</RootNamespace>
+        <ProjectGuid>{2E190A29-FC3A-4603-A191-E65C635DFA02}</ProjectGuid>
+        <RootNamespace>Sample</RootNamespace>
         <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
     </PropertyGroup>
     <PropertyGroup Label="Vcpkg">
@@ -25,7 +25,7 @@
     </PropertyGroup>
     <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props"/>
     <PropertyGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;" Label="Configuration">
-        <ConfigurationType>Static library (.lib)</ConfigurationType>
+        <ConfigurationType>Application</ConfigurationType>
         <UseDebugLibraries>true</UseDebugLibraries>
         <PlatformToolset>v143</PlatformToolset>
         <CharacterSet>Unicode</CharacterSet>
@@ -68,13 +68,13 @@
             <PrecompiledHeader>NotUsing</PrecompiledHeader>
             <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
             <LanguageStandard>stdcpp20</LanguageStandard>
-            <AdditionalIncludeDirectories>$(SolutionDir)../../SFML-2.5.1/include</AdditionalIncludeDirectories>
+            <AdditionalIncludeDirectories>$(SolutionDir)../../SFML-2.5.1/include; $(SolutionDir)../../src/LightEngine</AdditionalIncludeDirectories>
         </ClCompile>
         <Link>
             <SubSystem>Console</SubSystem>
             <GenerateDebugInformation>true</GenerateDebugInformation>
-            <AdditionalLibraryDirectories>$(SolutionDir)../../SFML-2.5.1/lib</AdditionalLibraryDirectories>
-            <AdditionalDependencies>sfml-graphics-s-d.lib;sfml-window-s-d.lib;sfml-audio-s-d.lib;sfml-system-s-d.lib;opengl32.lib;glu32.lib;gdi32.lib;winmm.lib;dwmapi.lib;freetype.lib;openal32.lib;flac.lib;vorbisenc.lib;vorbisfile.lib;vorbis.lib;ogg.lib;%(AdditionalDependencies)</AdditionalDependencies>
+            <AdditionalLibraryDirectories>$(SolutionDir)../../SFML-2.5.1/lib; $(SolutionDir)../../ide/vs/LightEngine/Build/Debug</AdditionalLibraryDirectories>
+            <AdditionalDependencies>sfml-graphics-s-d.lib;sfml-window-s-d.lib;sfml-audio-s-d.lib;sfml-system-s-d.lib;opengl32.lib;glu32.lib;gdi32.lib;winmm.lib;dwmapi.lib;freetype.lib;openal32.lib;flac.lib;vorbisenc.lib;vorbisfile.lib;vorbis.lib;ogg.lib;LightEngine.lib;%(AdditionalDependencies)</AdditionalDependencies>
         </Link>
     </ItemDefinitionGroup>
     <ItemDefinitionGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">
@@ -83,7 +83,7 @@
             <SDLCheck>true</SDLCheck>
             <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
             <ConformanceMode>true</ConformanceMode>
-            <PrecompiledHeader>NotUsing</PrecompiledHeader>
+            <PrecompiledHeader>Use</PrecompiledHeader>
             <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
             <LanguageStandard>stdcpp20</LanguageStandard>
         </ClCompile>
@@ -94,39 +94,15 @@
         </Link>
     </ItemDefinitionGroup>
     <ItemGroup>
-        <ClCompile Include="..\..\..\src\LightEngine\AABBCollider.cpp"/>
-        <ClCompile Include="..\..\..\src\LightEngine\AnimatedSprite.cpp"/>
-        <ClCompile Include="..\..\..\src\LightEngine\AssetManager.cpp"/>
-        <ClCompile Include="..\..\..\src\LightEngine\Camera.cpp"/>
-        <ClCompile Include="..\..\..\src\LightEngine\CircleCollider.cpp"/>
-        <ClCompile Include="..\..\..\src\LightEngine\Collider.cpp"/>
-        <ClCompile Include="..\..\..\src\LightEngine\Debug.cpp"/>
-        <ClCompile Include="..\..\..\src\LightEngine\Entity.cpp"/>
-        <ClCompile Include="..\..\..\src\LightEngine\GameManager.cpp"/>
-        <ClCompile Include="..\..\..\src\LightEngine\GravityEntity.cpp"/>
-        <ClCompile Include="..\..\..\src\LightEngine\Music.cpp"/>
-        <ClCompile Include="..\..\..\src\LightEngine\Scene.cpp"/>
-        <ClCompile Include="..\..\..\src\LightEngine\Sound.cpp"/>
-        <ClCompile Include="..\..\..\src\LightEngine\SpriteAnimation.cpp"/>
-        <ClCompile Include="..\..\..\src\LightEngine\Utils.cpp"/>
+        <ClCompile Include="..\..\..\src\Sample\DummyEntity.cpp"/>
+        <ClCompile Include="..\..\..\src\Sample\main.cpp"/>
+        <ClCompile Include="..\..\..\src\Sample\Player.cpp"/>
+        <ClCompile Include="..\..\..\src\Sample\SampleScene.cpp"/>
     </ItemGroup>
     <ItemGroup>
-        <ClInclude Include="..\..\..\src\LightEngine\AABBCollider.h"/>
-        <ClInclude Include="..\..\..\src\LightEngine\AnimatedSprite.h"/>
-        <ClInclude Include="..\..\..\src\LightEngine\AssetManager.h"/>
-        <ClInclude Include="..\..\..\src\LightEngine\Camera.h"/>
-        <ClInclude Include="..\..\..\src\LightEngine\CircleCollider.h"/>
-        <ClInclude Include="..\..\..\src\LightEngine\Collider.h"/>
-        <ClInclude Include="..\..\..\src\LightEngine\Debug.h"/>
-        <ClInclude Include="..\..\..\src\LightEngine\Entity.h"/>
-        <ClInclude Include="..\..\..\src\LightEngine\GameManager.h"/>
-        <ClInclude Include="..\..\..\src\LightEngine\GravityEntity.h"/>
-        <ClInclude Include="..\..\..\src\LightEngine\json.hpp"/>
-        <ClInclude Include="..\..\..\src\LightEngine\Music.h"/>
-        <ClInclude Include="..\..\..\src\LightEngine\Scene.h"/>
-        <ClInclude Include="..\..\..\src\LightEngine\Sound.h"/>
-        <ClInclude Include="..\..\..\src\LightEngine\SpriteAnimation.h"/>
-        <ClInclude Include="..\..\..\src\LightEngine\Utils.h"/>
+        <ClInclude Include="..\..\..\src\Sample\DummyEntity.h"/>
+        <ClInclude Include="..\..\..\src\Sample\Player.h"/>
+        <ClInclude Include="..\..\..\src\Sample\SampleScene.h"/>
     </ItemGroup>
     <ItemGroup/>
     <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets"/>

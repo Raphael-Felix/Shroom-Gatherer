@@ -4,7 +4,7 @@
     "projects": [
         "LightEngine.prj",
         "Sample.prj",
-        "Shroom-Gatherer.prj"
+        "Shroom_Gatherer.prj"
     ],
     "solution_name": "LightEngine",
     "version": "16",

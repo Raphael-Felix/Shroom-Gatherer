@@ -2,77 +2,77 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
     <ItemGroup>
         <Filter Include="header">
-            <UniqueIdentifier>{DB6886AE-C419-4BEA-BB1B-26BD076CDD14}</UniqueIdentifier>
+            <UniqueIdentifier>{EB0388B8-B372-4416-A4D3-2A5556277D9E}</UniqueIdentifier>
             <Extensions>h;hpp</Extensions>
         </Filter>
         <Filter Include="resource">
-            <UniqueIdentifier>{0FA82076-73C0-468C-8426-B12C3E026E5C}</UniqueIdentifier>
+            <UniqueIdentifier>{344CEF79-E49C-46A5-9A0B-08E8126D70AC}</UniqueIdentifier>
             <Extensions>hlsl;jpg;jpeg;png;wav;mp3;ico;dds;rc;obj</Extensions>
         </Filter>
         <Filter Include="source">
-            <UniqueIdentifier>{7086AF26-A2D2-4488-AE26-CB2093A8C481}</UniqueIdentifier>
+            <UniqueIdentifier>{2CEE57BD-632C-49A0-9483-FCAB13C36988}</UniqueIdentifier>
             <Extensions>cpp;c</Extensions>
         </Filter>
     </ItemGroup>
     <ItemGroup>
-        <ClCompile Include="..\..\..\src\Shroom-Gatherer\Button.cpp">
+        <ClCompile Include="..\..\..\src\Shroom_Gatherer\Button.cpp">
             <Filter>source</Filter>
         </ClCompile>
-        <ClCompile Include="..\..\..\src\Shroom-Gatherer\FliesSwarm.cpp">
+        <ClCompile Include="..\..\..\src\Shroom_Gatherer\FliesSwarm.cpp">
             <Filter>source</Filter>
         </ClCompile>
-        <ClCompile Include="..\..\..\src\Shroom-Gatherer\GameScene.cpp">
+        <ClCompile Include="..\..\..\src\Shroom_Gatherer\GameScene.cpp">
             <Filter>source</Filter>
         </ClCompile>
-        <ClCompile Include="..\..\..\src\Shroom-Gatherer\main.cpp">
+        <ClCompile Include="..\..\..\src\Shroom_Gatherer\main.cpp">
             <Filter>source</Filter>
         </ClCompile>
-        <ClCompile Include="..\..\..\src\Shroom-Gatherer\Mushroom.cpp">
+        <ClCompile Include="..\..\..\src\Shroom_Gatherer\Mushroom.cpp">
             <Filter>source</Filter>
         </ClCompile>
-        <ClCompile Include="..\..\..\src\Shroom-Gatherer\pch.cpp">
+        <ClCompile Include="..\..\..\src\Shroom_Gatherer\pch.cpp">
             <Filter>source</Filter>
         </ClCompile>
-        <ClCompile Include="..\..\..\src\Shroom-Gatherer\ShopButton.cpp">
+        <ClCompile Include="..\..\..\src\Shroom_Gatherer\ShopButton.cpp">
             <Filter>source</Filter>
         </ClCompile>
-        <ClCompile Include="..\..\..\src\Shroom-Gatherer\SkillButton.cpp">
+        <ClCompile Include="..\..\..\src\Shroom_Gatherer\SkillButton.cpp">
             <Filter>source</Filter>
         </ClCompile>
-        <ClInclude Include="..\..\..\src\Shroom-Gatherer\Button.h">
+        <ClInclude Include="..\..\..\src\Shroom_Gatherer\Button.h">
             <Filter>header</Filter>
         </ClInclude>
-        <ClInclude Include="..\..\..\src\Shroom-Gatherer\FliesSwarm.h">
+        <ClInclude Include="..\..\..\src\Shroom_Gatherer\FliesSwarm.h">
             <Filter>header</Filter>
         </ClInclude>
-        <ClInclude Include="..\..\..\src\Shroom-Gatherer\GameScene.h">
+        <ClInclude Include="..\..\..\src\Shroom_Gatherer\GameScene.h">
             <Filter>header</Filter>
         </ClInclude>
-        <ClInclude Include="..\..\..\src\Shroom-Gatherer\main.h">
+        <ClInclude Include="..\..\..\src\Shroom_Gatherer\main.h">
             <Filter>header</Filter>
         </ClInclude>
-        <ClInclude Include="..\..\..\src\Shroom-Gatherer\Mushroom.h">
+        <ClInclude Include="..\..\..\src\Shroom_Gatherer\Mushroom.h">
             <Filter>header</Filter>
         </ClInclude>
-        <ClInclude Include="..\..\..\src\Shroom-Gatherer\pch.h">
+        <ClInclude Include="..\..\..\src\Shroom_Gatherer\pch.h">
             <Filter>header</Filter>
         </ClInclude>
-        <ClInclude Include="..\..\..\src\Shroom-Gatherer\resource.h">
+        <ClInclude Include="..\..\..\src\Shroom_Gatherer\resource.h">
             <Filter>header</Filter>
         </ClInclude>
-        <ClInclude Include="..\..\..\src\Shroom-Gatherer\ShopButton.h">
+        <ClInclude Include="..\..\..\src\Shroom_Gatherer\ShopButton.h">
             <Filter>header</Filter>
         </ClInclude>
-        <ClInclude Include="..\..\..\src\Shroom-Gatherer\SkillButton.h">
+        <ClInclude Include="..\..\..\src\Shroom_Gatherer\SkillButton.h">
             <Filter>header</Filter>
         </ClInclude>
-        <None Include="..\..\..\src\Shroom-Gatherer\app.ico">
+        <None Include="..\..\..\src\Shroom_Gatherer\app.ico">
             <Filter>resource</Filter>
         </None>
-        <None Include="..\..\..\src\Shroom-Gatherer\app.rc">
+        <None Include="..\..\..\src\Shroom_Gatherer\app.rc">
             <Filter>resource</Filter>
         </None>
-        <None Include="..\..\..\src\Shroom-Gatherer\small.ico">
+        <None Include="..\..\..\src\Shroom_Gatherer\small.ico">
             <Filter>resource</Filter>
         </None>
     </ItemGroup>

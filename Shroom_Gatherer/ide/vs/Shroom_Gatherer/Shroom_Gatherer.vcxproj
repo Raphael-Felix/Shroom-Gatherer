@@ -13,8 +13,8 @@
     <PropertyGroup Label="Globals">
         <VCProjectVersion>17.0</VCProjectVersion>
         <Keyword>Win32Proj</Keyword>
-        <ProjectGuid>{13C066D9-7E5B-4A88-A0DF-03ECC1D6B6B6}</ProjectGuid>
-        <RootNamespace>Sample</RootNamespace>
+        <ProjectGuid>{4F1C3E17-EA4A-4D76-A405-585186FFF476}</ProjectGuid>
+        <RootNamespace>Shroom_Gatherer</RootNamespace>
         <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
     </PropertyGroup>
     <PropertyGroup Label="Vcpkg">
@@ -81,30 +81,49 @@
         <ClCompile>
             <WarningLevel>Level3</WarningLevel>
             <SDLCheck>true</SDLCheck>
-            <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+            <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions);SFML_STATIC</PreprocessorDefinitions>
             <ConformanceMode>true</ConformanceMode>
-            <PrecompiledHeader>Use</PrecompiledHeader>
+            <PrecompiledHeader>NotUsing</PrecompiledHeader>
             <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
             <LanguageStandard>stdcpp20</LanguageStandard>
+            <AdditionalIncludeDirectories>$(SolutionDir)../../SFML-2.5.1/include; $(SolutionDir)../../src/LightEngine</AdditionalIncludeDirectories>
         </ClCompile>
         <Link>
             <SubSystem>Console</SubSystem>
             <GenerateDebugInformation>false</GenerateDebugInformation>
-            <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+            <AdditionalLibraryDirectories>$(SolutionDir)../../SFML-2.5.1/lib; $(SolutionDir)../../ide/vs/LightEngine/Build/Release</AdditionalLibraryDirectories>
+            <AdditionalDependencies>sfml-graphics-s.lib;sfml-window-s.lib;sfml-audio-s.lib;sfml-system-s.lib;opengl32.lib;glu32.lib;gdi32.lib;winmm.lib;dwmapi.lib;freetype.lib;openal32.lib;flac.lib;vorbisenc.lib;vorbisfile.lib;vorbis.lib;ogg.lib;LightEngine.lib;%(AdditionalDependencies)</AdditionalDependencies>
         </Link>
     </ItemDefinitionGroup>
     <ItemGroup>
-        <ClCompile Include="..\..\..\src\Sample\DummyEntity.cpp"/>
-        <ClCompile Include="..\..\..\src\Sample\main.cpp"/>
-        <ClCompile Include="..\..\..\src\Sample\Player.cpp"/>
-        <ClCompile Include="..\..\..\src\Sample\SampleScene.cpp"/>
+        <ClCompile Include="..\..\..\src\Shroom_Gatherer\Button.cpp"/>
+        <ClCompile Include="..\..\..\src\Shroom_Gatherer\FliesSwarm.cpp"/>
+        <ClCompile Include="..\..\..\src\Shroom_Gatherer\GameScene.cpp"/>
+        <ClCompile Include="..\..\..\src\Shroom_Gatherer\main.cpp"/>
+        <ClCompile Include="..\..\..\src\Shroom_Gatherer\Mushroom.cpp"/>
+        <ClCompile Include="..\..\..\src\Shroom_Gatherer\pch.cpp">
+            <PrecompiledHeader Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">Create</PrecompiledHeader>
+            <PrecompiledHeader Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">Create</PrecompiledHeader>
+        </ClCompile>
+        <ClCompile Include="..\..\..\src\Shroom_Gatherer\ShopButton.cpp"/>
+        <ClCompile Include="..\..\..\src\Shroom_Gatherer\SkillButton.cpp"/>
     </ItemGroup>
     <ItemGroup>
-        <ClInclude Include="..\..\..\src\Sample\DummyEntity.h"/>
-        <ClInclude Include="..\..\..\src\Sample\Player.h"/>
-        <ClInclude Include="..\..\..\src\Sample\SampleScene.h"/>
+        <ClInclude Include="..\..\..\src\Shroom_Gatherer\Button.h"/>
+        <ClInclude Include="..\..\..\src\Shroom_Gatherer\FliesSwarm.h"/>
+        <ClInclude Include="..\..\..\src\Shroom_Gatherer\GameScene.h"/>
+        <ClInclude Include="..\..\..\src\Shroom_Gatherer\main.h"/>
+        <ClInclude Include="..\..\..\src\Shroom_Gatherer\Mushroom.h"/>
+        <ClInclude Include="..\..\..\src\Shroom_Gatherer\pch.h"/>
+        <ClInclude Include="..\..\..\src\Shroom_Gatherer\resource.h"/>
+        <ClInclude Include="..\..\..\src\Shroom_Gatherer\ShopButton.h"/>
+        <ClInclude Include="..\..\..\src\Shroom_Gatherer\SkillButton.h"/>
     </ItemGroup>
-    <ItemGroup/>
+    <ItemGroup>
+        <None Include="..\..\..\src\Shroom_Gatherer\app.ico"/>
+        <None Include="..\..\..\src\Shroom_Gatherer\app.rc"/>
+        <None Include="..\..\..\src\Shroom_Gatherer\small.ico"/>
+    </ItemGroup>
     <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets"/>
     <ImportGroup Label="ExtensionTargets"/>
 </Project>
